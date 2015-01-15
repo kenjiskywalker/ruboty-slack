@@ -72,6 +72,10 @@ module Ruboty
         ENV["SLACK_TEAM"]
       end
 
+      def link_names
+        ENV["SLACK_LINK_NAMES"] ||= 0
+      end
+
       def bind
         client.on_private_message(&method(:on_message))
         client.on_room_message(&method(:on_message))
@@ -90,6 +94,7 @@ module Ruboty
             from_name: username_of(message),
             to: message.to,
             type: message.type,
+            link_names: message.link_names,
           )
         end
       end
