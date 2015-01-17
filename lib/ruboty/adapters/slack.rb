@@ -20,6 +20,7 @@ module Ruboty
           from: message[:from],
           to: message[:original][:type] == "chat" ? message[:to] + "/resource" : message[:to],
           type: message[:original][:type],
+          link_names: message[:original][:link_names],
         )
       end
 
