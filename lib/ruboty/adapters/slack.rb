@@ -7,6 +7,7 @@ module Ruboty
       env :SLACK_ROOM, "Room name to join in at first (e.g. general)"
       env :SLACK_TEAM, "Account's team name (e.g. wonderland)"
       env :SLACK_USERNAME, "Account's username (e.g. alice)"
+      env :SLACK_LINK_NAMES, "Account's username (e.g. alice)"
 
       def run
         init
